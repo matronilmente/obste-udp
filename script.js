@@ -46,3 +46,6 @@ function cerrarModal() {
 }
 
 crearMalla();
+function cerrarModal() {
+  document.getElementById('modal').classList.add('hidden');
+}
