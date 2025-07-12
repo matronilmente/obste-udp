@@ -2,15 +2,23 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Malla Obstetricia UDP Interactiva</title>
-  <style>
-    .ramo { padding:8px; margin:4px; border:1px solid #888; display:inline-block; cursor:pointer; }
-    .aprobado { text-decoration:line-through; background:#cfc; }
-    .bloqueado { opacity:0.4; pointer-events:none; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malla Obstetricia UDP</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="malla"></div>
-  <script src="malla.js"></script>
+  <header>
+    <h1>Obstetricia y Neonatología UDP</h1>
+  </header>
+  <main id="malla-container"></main>
+  <div id="modal" class="hidden">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-descripcion"></p>
+    </div>
+  </div>
+  <script src="ramos.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
