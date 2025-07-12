@@ -1,32 +1,31 @@
 // Definición de ramos con prerrequisitos (ejemplos reales según PDF UDP)
+
 const ramos = [
-  { id: 'Morfofunción I', prereq: [] },
-  { id: 'Morfofunción II', prereq: ['Morfofunción I'] },
-  { id: 'Cuidado Integral RN Sano', prereq: ['Morfofunción I', 'Atención en Salud Reproductiva'] },
-  // Continúa con el resto de ramos según malla...
-];
+  // Semestre 1
+  { id: 'Salud con Perspectiva de Género', prereq: [], semestre: 1 },
+  { id: 'Fundamentos de la Matronería', prereq: [], semestre: 1 },
+  { id: 'Cuidados en Salud Mental', prereq: [], semestre: 1 },
+  { id: 'Bases Científicas del Funcionamiento Humano', prereq: [], semestre: 1 },
 
-// Estado actual
-const estado = {}; 
-ramos.forEach(r => estado[r.id] = false);
+  // Semestre 2
+  { id: 'Clínica de PAM', prereq: ['Fundamentos de la Matronería'], semestre: 2 },
+  { id: 'Morfofunción II', prereq: ['Bases Científicas del Funcionamiento Humano'], semestre: 2 },
+  { id: 'Salud Sexual Integral', prereq: ['Salud con Perspectiva de Género'], semestre: 2 },
+  { id: 'Inglés I', prereq: [], semestre: 2 },
 
-// Renderizar
-function render() {
-  const cont = document.getElementById('malla');
-  cont.innerHTML = '';
-  ramos.forEach(r => {
-    const div = document.createElement('div');
-    div.className = 'ramo';
-    if (estado[r.id]) div.classList.add('aprobado');
-    else if (!r.prereq.every(p => estado[p])) div.classList.add('bloqueado');
-    div.textContent = r.id;
-    div.onclick = () => {
-      if (!div.classList.contains('bloqueado')) {
-        estado[r.id] = !estado[r.id];
-        render();
-      }
-    };
-    cont.appendChild(div);
-  });
-}
-render();
+  // Semestre 3
+  { id: 'Atención en Salud Reproductiva', prereq: ['Fundamentos de la Matronería'], semestre: 3 },
+  { id: 'Cuidado Integral en el Periodo Grávido Puerperal', prereq: ['Clínica de PAM'], semestre: 3 },
+  { id: 'Cuidado Integral de la/el RN Sano', prereq: ['Morfofunción II'], semestre: 3 },
+  { id: 'Minor/CFG 1', prereq: [], semestre: 3 },
+  { id: 'Inglés II', prereq: ['Inglés I'], semestre: 3 },
+
+  // Semestre 4
+  { id: 'Salud Familiar', prereq: ['Cuidado Integral en el Periodo Grávido Puerperal'], semestre: 4 },
+  { id: 'Cuidado del Alto Riesgo Obstétrico', prereq: ['Cuidado Integral en el Periodo Grávido Puerperal'], semestre: 4 },
+  { id: 'Cuidado Integral de la/el RN con Patologías', prereq: ['Cuidado Integral de la/el RN Sano'], semestre: 4 },
+  { id: 'Abordaje Integral de Patologías Frecuentes', prereq: ['Bases Científicas del Funcionamiento Humano'], semestre: 4 },
+  { id: 'Minor/CFG 2', prereq: [], semestre: 4 },
+  { id: 'Inglés III', prereq: ['Inglés II'], semestre: 4 },
+
+ 
