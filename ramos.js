@@ -1,6 +1,6 @@
 const malla = [
   {
-    semestre: "1ro",
+    semestre: "semestre 1",
     color: "#FFF5EE",
     ramos: [
       { nombre: "Bases científicas del funcionamiento humano" },
@@ -10,7 +10,7 @@ const malla = [
     ]
   },
   {
-    semestre: "2do",
+    semestre: "semestre 2",
     color: "#F8C8DC",
     ramos: [
       { nombre: "Morfofunción I" },
@@ -20,7 +20,7 @@ const malla = [
     ]
   },
   {
-    semestre: "3ro",
+    semestre: "semestre 3",
     color: "#770737",
     ramos: [
       { nombre: "Morfofunción II" },
@@ -32,7 +32,7 @@ const malla = [
     ]
   },
   {
-    semestre: "4to",
+    semestre: "semestre 4",
     color: "#ddc0b4",
     ramos: [
       { nombre: "Abordaje integral de patologías frecuentes" },
@@ -44,7 +44,7 @@ const malla = [
     ]
   },
   {
-    semestre: "5to",
+    semestre: "semestre 5",
     color: "#fc8eac",
     ramos: [
       { nombre: "Clínica integrada en matronería fisiológica" },
@@ -54,7 +54,7 @@ const malla = [
     ]
   },
   {
-    semestre: "6to",
+    semestre: "semestre 6",
     color: "#fde4f2",
     ramos: [
       { nombre: "Cuidados perinatales de alto riesgo" },
@@ -65,7 +65,7 @@ const malla = [
     ]
   },
   {
-    semestre: "7mo",
+    semestre: "semestre 7",
     color: "#eea1cd",
     ramos: [
       { nombre: "Integrado disciplinar basado en simulación" },
@@ -77,7 +77,7 @@ const malla = [
     ]
   },
   {
-    semestre: "8vo",
+    semestre: "semestre 8",
     color: "#ddc6c6",
     ramos: [
       { nombre: "Clínica integrada en matronería patológica" },
@@ -86,7 +86,7 @@ const malla = [
     ]
   },
   {
-    semestre: "9no y 10mo",
+    semestre: "semestre 9 y 10",
     color: "#e1ccb7",
     ramos: [
       { nombre: "Internado de obstetricia" },
