@@ -27,12 +27,8 @@ function crearMalla() {
 
       card.textContent = ramo.nombre;
 
-      card.onclick = () => {
-        // Alternar tachado
-        card.classList.toggle("tachado");
-        // Mostrar modal
-        mostrarModal(ramo.nombre, ramo.descripcion || "Pronto se agregará la descripción.");
-        // Aquí podrías agregar lógica para mostrar otros ramos si quieres
+   card.onclick = () => {
+  card.classList.toggle("tachado");
       };
 
       grid.appendChild(card);
