@@ -112,3 +112,25 @@ header h1 {
   cursor: pointer;
   color: #900;
 }
+#malla-container {
+  display: flex;
+  flex-direction: row; /* columnas de semestres */
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: nowrap; /* o wrap si quieres que salte a nueva línea en pantallas pequeñas */
+  overflow-x: auto; /* para hacer scroll horizontal si hay muchos */
+}
+
+.semestre {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-width: 180px;
+  max-width: 200px;
+  font-family: Helvetica, sans-serif;
+  border-radius: 8px;
+}
