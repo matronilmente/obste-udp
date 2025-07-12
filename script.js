@@ -26,26 +26,19 @@ function crearMalla() {
       }
 
       card.textContent = ramo.nombre;
-      card.onclick = () => mostrarModal(ramo.nombre, ramo.descripcion || "Pronto se agregará la descripción.");
+
+      card.onclick = () => {
+        // Alternar tachado
+        card.classList.toggle("tachado");
+        // Mostrar modal
+        mostrarModal(ramo.nombre, ramo.descripcion || "Pronto se agregará la descripción.");
+        // Aquí podrías agregar lógica para mostrar otros ramos si quieres
+      };
+
       grid.appendChild(card);
     });
 
     bloque.appendChild(grid);
     container.appendChild(bloque);
   });
-}
-
-function mostrarModal(titulo, descripcion) {
-  document.getElementById("modal").classList.remove("hidden");
-  document.getElementById("modal-titulo").textContent = titulo;
-  document.getElementById("modal-descripcion").textContent = descripcion;
-}
-
-function cerrarModal() {
-  document.getElementById("modal").classList.add("hidden");
-}
-
-crearMalla();
-function cerrarModal() {
-  document.getElementById('modal').classList.add('hidden');
 }
