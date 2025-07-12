@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Malla Obstetricia UDP Interactiva</title>
+  <style>
+    .ramo { padding:8px; margin:4px; border:1px solid #888; display:inline-block; cursor:pointer; }
+    .aprobado { text-decoration:line-through; background:#cfc; }
+    .bloqueado { opacity:0.4; pointer-events:none; }
+  </style>
+</head>
+<body>
+  <div id="malla"></div>
+  <script src="malla.js"></script>
+</body>
+</html>

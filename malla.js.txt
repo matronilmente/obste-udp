@@ -1,0 +1,32 @@
+// Definición de ramos con prerrequisitos (ejemplos reales según PDF UDP)
+const ramos = [
+  { id: 'Morfofunción I', prereq: [] },
+  { id: 'Morfofunción II', prereq: ['Morfofunción I'] },
+  { id: 'Cuidado Integral RN Sano', prereq: ['Morfofunción I', 'Atención en Salud Reproductiva'] },
+  // Continúa con el resto de ramos según malla...
+];
+
+// Estado actual
+const estado = {}; 
+ramos.forEach(r => estado[r.id] = false);
+
+// Renderizar
+function render() {
+  const cont = document.getElementById('malla');
+  cont.innerHTML = '';
+  ramos.forEach(r => {
+    const div = document.createElement('div');
+    div.className = 'ramo';
+    if (estado[r.id]) div.classList.add('aprobado');
+    else if (!r.prereq.every(p => estado[p])) div.classList.add('bloqueado');
+    div.textContent = r.id;
+    div.onclick = () => {
+      if (!div.classList.contains('bloqueado')) {
+        estado[r.id] = !estado[r.id];
+        render();
+      }
+    };
+    cont.appendChild(div);
+  });
+}
+render();
