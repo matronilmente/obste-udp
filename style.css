@@ -95,7 +95,7 @@ header h1 {
 }
 
 .modal-content {
-  background-color: white;
+  background-color: black;
   padding: 20px;
   border-radius: 8px;
   max-width: 400px;
@@ -133,4 +133,10 @@ header h1 {
   max-width: 200px;
   font-family: Helvetica, sans-serif;
   border-radius: 8px;
+}
+.ramo.tachado {
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.6;
+  cursor: default;
 }
